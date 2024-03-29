@@ -1,0 +1,10 @@
+{
+    "apiConfig": {
+         "giphyUrl": "https://api.giphy.com/v1/gifs/",
+         "dogsUrl": "https://api.api-ninjas.com/v1/"
+    },
+    "apiKeys": {
+        "giphyKey": "z3Kj5fc1kuXK8KAHdKpUTBDO01wg3w4a",
+         "dogsKey": "BLOT9ijDoS2b4sV2RqsMoeyjMyHzRhnPxOUk82jT"
+    }
+}

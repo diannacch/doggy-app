@@ -1,0 +1,59 @@
+.mat-mdc-dialog-actions {
+    justify-content: end;
+}
+
+.img-avatar {
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+}
+
+.ui-modal-body {
+    text-align: center;
+}
+
+.row {
+    margin-right: 0;
+    margin-left: 0;
+}
+
+strong {
+    font-size: 18px;
+}
+
+.footer {
+    padding: 0 20%;
+}
+
+.adoption-btn {
+    width: 100%;
+
+}
+
+.mat-mdc-fab.mat-accent,
+.mat-mdc-mini-fab.mat-accent {
+    font-family: "Balsamiq Sans", sans-serif;
+    font-style: normal;
+    --mdc-fab-container-color: #FFD300;
+    color: #232323;
+    font-size: 18px;
+    font-weight: bolder;
+}
+
+//ANIMATION
+.btn-animated {
+    animation: moveInBottom 5s ease-out;
+    animation-fill-mode: backwards;
+}
+
+@keyframes moveInBottom {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}

@@ -1,0 +1,132 @@
+@use '../../../../../../src/app/breakpoints.scss';
+
+.responsive-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    padding: 0 30px 30px 30px;
+}
+
+.card {
+    width: 100%;
+    justify-self: center;
+    border-radius: 26px;
+    border: 0 solid rgba(0, 0, 0, .125);
+}
+
+.container-fluid {
+    padding: 0 60px;
+    background-color: #232323;
+}
+
+.header {
+    background-color: #FFD300;
+    height: 200px;
+    text-align: center;
+    z-index: 1;
+}
+
+.logo {
+    width: 200px;
+    height: 200px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dropdown {
+    text-decoration: underline;
+}
+
+.display-error {
+    display: none;
+    text-align: center;
+}
+
+.text-header {
+    display: inline-block;
+    color: #232323;
+    font-size: 3em;
+    z-index: 1;
+    display: inline-block;
+    vertical-align: middle;
+    animation-duration: 3s;
+    animation-name: slidein;
+}
+
+.results {
+    width: 100%;
+    height: 70%;
+    position: relative;
+}
+
+.justify-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.home-dog-img {
+    height: 500px;
+}
+
+.container-search {
+    width: 100%;
+    height: 150px
+}
+
+//ANIMATION
+@keyframes slidein {
+    from {
+        margin-left: 50%;
+        width: 50%;
+    }
+
+    to {
+        margin-left: 0%;
+        width: 50%;
+    }
+}
+
+@media #{map-get(breakpoints.$queries, '<937')} {
+    .balsamiq-sans-bold {
+        display: none;
+    }
+}
+
+@media #{map-get(breakpoints.$queries, '<860')} {
+    .responsive-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+        padding: 0 30px 30px 30px;
+    }
+}
+
+@media #{map-get(breakpoints.$queries, '<735')} {
+    .responsive-grid {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 30px;
+        padding: 0 30px 30px 30px;
+    }
+}
+
+@media #{map-get(breakpoints.$queries, '<515')} {
+    .display-error {
+        display: inline-block;
+        text-align: center;
+    }
+
+    .results,
+    .container-fluid,
+    .responsive-grid {
+        display: none;
+    }
+}

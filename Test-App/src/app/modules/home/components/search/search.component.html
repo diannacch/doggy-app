@@ -1,0 +1,8 @@
+<div class="filter-section">
+    <app-search-box class="mx-2 search" [control]="filterControl" [options]="searchOptions"
+        [configurations]="configurations"></app-search-box>
+    <button nz-button [disabled]="!isFormValid" class="btn-search" nzType="primary" (click)="search()" [nzSize]="size" nzShape="round">
+        <span nz-icon nzType="search"></span>
+        Search
+    </button>
+</div>

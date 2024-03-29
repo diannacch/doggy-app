@@ -1,0 +1,20 @@
+<div class="header col-md-12">
+    <img class="logo" src="assets/images/logo.jpeg" alt="">
+    <h2 class="balsamiq-sans-bold text-header">Encuentra a tu amigo perruno ideal!</h2>
+</div>
+<div class="container-fluid">
+    <div class="container-search center">
+        <app-search [filterControl]="filterControl" [configurations]="autocompleteConfiguration"
+            (executeSearch)="executeSearch()"></app-search>
+    </div>
+</div>
+<div *ngIf="listElements.length > 0 && !notFound" class="grid-container responsive-grid mt-5">
+    <app-info-card class="card" [item]="item" *ngFor="let item of listElements"></app-info-card>
+</div>
+<div *ngIf="listElements.length === 0 || notFound" class="results">
+    <app-not-found class="justify-center" *ngIf="notFound"></app-not-found>
+    <img class="justify-center home-dog-img" *ngIf="!onSearch" src="../../../../../assets/images/gif-dog.gif" alt="">
+</div>
+<div class="display-error justify-center">
+    <strong>Lo sentimos D: </strong><br><strong>La resolucion de su dispositivo no esta soportado favor de cambiar de dispositivo.</strong>
+</div>

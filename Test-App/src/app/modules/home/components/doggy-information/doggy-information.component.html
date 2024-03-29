@@ -1,0 +1,44 @@
+<div mat-dialog-title>
+    <button class="btn-close-icon" (click)="$event.stopPropagation();onCancel()" mat-icon-button>
+        <mat-icon>close</mat-icon>
+    </button>
+</div>
+<div *ngIf="!isLoading" class="ui-modal-body row">
+    <div class="col-md-4">
+        <img class="img-avatar" [src]="data.url" alt="">
+    </div>
+    <div class="col-md-8">
+        <h1>{{data.name}}</h1>
+        <div class="row mb-3">
+            <div class="col-md-6">
+                <img matChipAvatar src="../../../../assets/images/altura.png" alt="" />
+                <strong class="ml-2">Altura Maxima: {{height | lengthConversions:'IN-CM'| number : '1.2-2'}}
+                    cm</strong>
+            </div>
+            <div class="col-md-6">
+                <img matChipAvatar src="../../../../assets/images/scale.png" alt="" />
+                <strong class="ml-2">Peso: {{weight| massConversions:'LB-KG'| number : '1.2-2'}} kg</strong>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <img matChipAvatar class="mb-2" src="../../../../assets/images/energy.png" alt="" />
+                <strong class="ml-2 mb-2">Energia:</strong><br>
+                <strong class="ml-2 mb-2">(20% Poca - 100% Mucha)</strong>
+                <nz-progress [nzPercent]="energy"></nz-progress>
+            </div>
+            <div class="col-md-6">
+                <img matChipAvatar class="mb-2" src="../../../../assets/images/easy.png" alt="" />
+                <strong class="ml-2 mb-2">Adiestramiento:</strong><br>
+                <strong class="ml-2 mb-2">(20% Dificil - 100% Facil)</strong>
+                <nz-progress [nzPercent]="trainability"></nz-progress>
+            </div>
+        </div>
+
+    </div>
+</div>
+<div mat-dialog-actions class="footer my-4">
+    <button class="adoption-btn mt-2 text-center btn-animated" mat-fab extended>
+        Adoptar<mat-icon>pets</mat-icon>
+    </button>
+</div>

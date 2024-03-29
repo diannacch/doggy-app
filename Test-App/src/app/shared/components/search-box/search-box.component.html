@@ -1,0 +1,13 @@
+<div class="example-input inputcontainer">
+    <input class="search-box" placeholder="Escribe una raza" [formControl]="control" nz-input [nzAutocomplete]="auto" />
+    <div *ngIf="isLoading" class="icon-container">
+        <nz-spin class="loader" nzSimple></nz-spin>
+    </div>
+    <nz-autocomplete #auto>
+        <nz-auto-option *ngFor="let option of options" [nzValue]="option.name">{{ option |
+            executeFormat:configurations?.dropdownFormatter}}
+            <img matChipAvatar src="../../../../assets/images/dog.png"
+                alt="" />
+        </nz-auto-option>
+    </nz-autocomplete>
+</div>

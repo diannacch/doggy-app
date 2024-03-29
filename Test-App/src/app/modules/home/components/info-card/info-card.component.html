@@ -1,0 +1,15 @@
+<mat-card class="info-card">
+    <mat-card-header>
+        <img mat-card-avatar class="img" mat-card-image [src]="item.user.avatar_url" alt="Gif">
+        <mat-card-title>{{item.user.display_name}}</mat-card-title>
+        <mat-card-subtitle>@{{item.user.username}}</mat-card-subtitle>
+    </mat-card-header>
+
+    <img class="gif" mat-card-image [src]="item.images.preview_webp.url" alt="Gif">
+    <mat-card-actions>
+        <button (click)="fav()" mat-icon-button aria-label="Example icon button with a heart icon">
+            <mat-icon [ngClass]="isFav ? 'background-fav' : 'background-not-fav'">{{iconType}}</mat-icon>
+        </button>
+        <button mat-button (click)="showDialog()">Más Información</button>
+    </mat-card-actions>
+</mat-card>
